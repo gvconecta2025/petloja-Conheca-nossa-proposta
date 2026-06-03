@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PetLojas - Diagnóstico Digital</title>
+
+<style>
+
+:root{
+    --green:#16A34A;
+    --blue:#0F172A;
+    --light:#F8FAFC;
+    --border:#DCE3EA;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:var(--blue);
+    line-height:1.6;
+}
+
+.container{
+    max-width:700px;
+    margin:auto;
+    padding:20px;
+}
+
+.hero{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.logo{
+    font-size:42px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.logo span{
+    color:var(--green);
+}
+
+h1{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    color:#555;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:var(--green);
+    color:white;
+    border:none;
+    border-radius:12px;
+    padding:14px 22px;
+    font-size:1rem;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    opacity:.9;
+}
+
+.step{
+    display:none;
+    margin-top:25px;
+    border:1px solid var(--border);
+    border-radius:18px;
+    overflow:hidden;
+    background:white;
+}
+
+.step-header{
+    background:var(--blue);
+    color:white;
+    padding:14px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.step-body{
+    padding:25px;
+}
+
+.step h2{
+    margin-bottom:15px;
+    color:var(--blue);
+}
+
+.step p{
+    margin-bottom:15px;
+}
+
+.result{
+    margin-top:20px;
+    background:#EEFDF2;
+    color:var(--green);
+    border-radius:12px;
+    padding:12px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.progress-wrapper{
+    display:none;
+    margin-bottom:20px;
+}
+
+.progress-label{
+    text-align:center;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+.progress{
+    width:100%;
+    height:12px;
+    background:#e5e7eb;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    width:0%;
+    height:100%;
+    background:var(--green);
+    transition:.4s;
+}
+
+.final-card{
+    text-align:center;
+}
+
+.whatsapp-btn{
+    display:block;
+    text-decoration:none;
+    text-align:center;
+    background:var(--green);
+    color:white;
+    padding:16px;
+    border-radius:12px;
+    font-weight:bold;
+    margin-top:20px;
+}
+
+.fade{
+    animation:fade .5s ease;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="hero">
+
+        <div class="logo">
+            <span>Pet</span>Lojas
+        </div>
+
+        <h1>
+            Seu pet shop está preparado para vender além do balcão?
+        </h1>
+
+        <p class="subtitle">
+            Descubra em menos de 3 minutos.
+        </p>
+
+        <button class="btn" onclick="startJourney()">
+            COMEÇAR
+        </button>
+
+    </div>
+
+    <div class="progress-wrapper" id="progressArea">
+        <div class="progress-label">
+            Diagnóstico em andamento
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+
+    <!-- BLOCO 1 -->
+
+    <div class="step" id="step1">
+
+        <div class="step-header">
+            PASSO 1 DE 5
+        </div>
+
+        <div class="step-body">
+
+            <h2>Como seus clientes encontram seus produtos hoje?</h2>
+
+            <p>
+                Imagine que um cliente precise comprar ração hoje.
+            </p>
+
+            <p>
+                Se ele quiser visualizar todos os produtos da sua loja sem sair de casa, como ele faz?
+            </p>
+
+            <p>
+                Em muitos pet shops ele precisa pedir fotos, perguntar preços e aguardar atendimento.
+            </p>
+
+            <div class="result">
+                GERA CONSCIÊNCIA
+            </div>
+
+            <br>
+
+            <button class="btn" onclick="showStep(2,20)">
+                Sim, isso acontece
+            </button>
+
+        </div>
+    </div>
+
+    <!-- BLOCO 2 -->
+
+    <div class="step" id="step2">
+
+        <div class="step-header">
+            PASSO 2 DE 5
+        </div>
+
+        <div class="step-body">
+
+            <h2>O concorrente realmente vende mais?</h2>
+
+            <p>
+                Muitas vezes o concorrente não é melhor.
+            </p>
+
+            <p>
+                Ele apenas é mais fácil de encontrar online.
+            </p>
+
+            <p>
+                Facilidade gera vendas.
+            </p>
+
+            <div class="result">
+                GERA PERCEPÇÃO DE PERDA
+            </div>
+
+            <br>
+
+            <button class="btn" onclick="showStep(3,40)">
+                Já percebi isso
+            </button>
+
+        </div>
+    </div>
+
+    <!-- BLOCO 3 -->
+
+    <div class="step" id="step3">
+
+        <div class="step-header">
+            PASSO 3 DE 5
+        </div>
+
+        <div class="step-body">
+
+            <h2>O que acontece depois da venda?</h2>
+
+            <p>
+                Você possui uma forma simples de trazer clientes antigos de volta?
+            </p>
+
+            <p>
+                Promoções, novidades e relacionamento aumentam a recompra.
+            </p>
+
+            <div class="result">
+                GERA OPORTUNIDADE
+            </div>
+
+            <br>
+
+            <button class="btn" onclick="showStep(4,60)">
+                Quero aumentar a recompra
+            </button>
+
+        </div>
+    </div>
+
+    <!-- BLOCO 4 -->
+
+    <div class="step" id="step4">
+
+        <div class="step-header">
+            PASSO 4 DE 5
+        </div>
+
+        <div class="step-body">
+
+            <h2>Conheça o Método PetLojas</h2>
+
+            <p>✓ Atrair Clientes</p>
+            <p>✓ Apresentar Produtos</p>
+            <p>✓ Receber Pedidos</p>
+            <p>✓ Gerar Recompra</p>
+
+            <div class="result">
+                GERA ENTENDIMENTO
+            </div>
+
+            <br>
+
+            <button class="btn" onclick="showStep(5,80)">
+                Quero conhecer mais
+            </button>
+
+        </div>
+    </div>
+
+    <!-- BLOCO 5 -->
+
+    <div class="step" id="step5">
+
+        <div class="step-header">
+            PASSO 5 DE 5
+        </div>
+
+        <div class="step-body final-card">
+
+            <h2>
+                Vamos conversar sobre sua loja?
+            </h2>
+
+            <p>
+                Agora que você concluiu o diagnóstico,
+                podemos avaliar como aplicar essa estratégia
+                ao seu pet shop.
+            </p>
+
+            <div class="result">
+                GERA AÇÃO
+            </div>
+
+            <a
+            class="whatsapp-btn"
+            href="https://wa.me/5533998104753?text=Olá! Acabei de concluir o diagnóstico da PetLojas e gostaria de conversar sobre como essa estratégia poderia ser aplicada na minha loja."
+            target="_blank">
+
+            FALAR NO WHATSAPP
+
+            </a>
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+function startJourney(){
+
+    document.getElementById('progressArea').style.display='block';
+
+    document.getElementById('step1').style.display='block';
+
+    document.getElementById('step1').classList.add('fade');
+
+    document.getElementById('progressBar').style.width='10%';
+
+    document.getElementById('step1').scrollIntoView({
+        behavior:'smooth'
+    });
+
+}
+
+function showStep(step,progress){
+
+    document.getElementById('progressBar').style.width=progress+'%';
+
+    const next=document.getElementById('step'+step);
+
+    next.style.display='block';
+
+    next.classList.add('fade');
+
+    next.scrollIntoView({
+        behavior:'smooth'
+    });
+
+}
+
+</script>
+
+</body>
+</html>
