@@ -1,7 +1,7 @@
 :root {
-    --navy: #103D73;
-    --coral: #FF7A6B;
-    --coral-hover: #F96A5A;
+    --navy: #0F172A;
+    --coral: #F97316;
+    --coral-hover: #EA580C;
     --bg: #F8FAFC;
 }
 
@@ -86,7 +86,7 @@ p {
     margin-top: 18px;
     padding: 18px;
     border-radius: 16px;
-    background: #EEF5FD;
+    background: #F1F5F9;
     color: var(--navy);
 }
 
@@ -122,7 +122,7 @@ p {
     display: none !important;
 }
 
-/* Botão de fonte no canto inferior direito para não atrapalhar a barra */
+/* Botão de fonte no canto inferior direito */
 .top-tools {
     position: fixed;
     bottom: 20px;
