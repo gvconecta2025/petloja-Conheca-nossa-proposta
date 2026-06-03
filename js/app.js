@@ -9,6 +9,14 @@ function startJourney(){
     document.getElementById('s1').classList.remove('hidden');
     document.getElementById('s1').scrollIntoView({behavior:'smooth'});
     update(1);
+
+    // Dedo-Duro do Google Analytics (Etapa 1)
+    if(typeof gtag !== 'undefined') {
+        gtag('event', 'funil_iniciado', {
+            'event_category': 'Diagnostico',
+            'event_label': 'Passo 1'
+        });
+    }
 }
 
 function showStep(n){
@@ -21,6 +29,15 @@ function showStep(n){
     document.getElementById('s'+n).classList.remove('hidden');
     document.getElementById('s'+n).scrollIntoView({behavior:'smooth'});
     update(n);
+
+    // Dedo-Duro do Google Analytics (Etapas 2 a 5)
+    if(typeof gtag !== 'undefined') {
+        gtag('event', 'etapa_concluida', {
+            'event_category': 'Diagnostico',
+            'event_label': 'Passo ' + n,
+            'valor_etapa': n
+        });
+    }
 }
 
 function update(n){
