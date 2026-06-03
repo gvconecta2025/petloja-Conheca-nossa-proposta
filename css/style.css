@@ -76,6 +76,8 @@ p {
     font-weight: bold;
     text-decoration: none;
     text-align: center;
+    position: relative;
+    z-index: 50;
 }
 
 .btn:hover {
@@ -122,7 +124,6 @@ p {
     display: none !important;
 }
 
-/* Botão de fonte no canto inferior direito */
 .top-tools {
     position: fixed;
     bottom: 20px;
