@@ -122,7 +122,7 @@ p {
     display: none !important;
 }
 
-/* Alterado para o fundo do ecrã para não tapar a barra de progresso no telemóvel */
+/* Botão de fonte no canto inferior direito para não atrapalhar a barra */
 .top-tools {
     position: fixed;
     bottom: 20px;
