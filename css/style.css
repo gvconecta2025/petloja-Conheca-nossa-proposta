@@ -1,140 +1,150 @@
-:root{
-    --navy:#103D73;
-    --coral:#FF7A6B;
-    --bg:#F8FAFC;
+:root {
+    --navy: #103D73;
+    --coral: #FF7A6B;
+    --coral-hover: #F96A5A;
+    --bg: #F8FAFC;
 }
 
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:var(--bg);
-    color:var(--navy);
-    font-size:20px;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--navy);
+    font-size: 20px;
 }
 
-.hero{
-    text-align:center;
-    padding:40px 20px;
-    background:#fff;
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
 }
 
-.logo{
-    width:260px;
-    margin-bottom:20px;
+.logo {
+    width: 260px;
+    margin-bottom: 20px;
 }
 
-.container{
-    max-width:720px;
-    margin:auto;
-    padding:20px;
+.container {
+    max-width: 720px;
+    margin: auto;
+    padding: 20px;
 }
 
-.block{
-    background:#fff;
-    border-radius:26px;
-    padding:34px;
-    margin:26px 0;
-    box-shadow:0 12px 40px rgba(0,0,0,.08);
+.block {
+    background: #fff;
+    border-radius: 26px;
+    padding: 34px;
+    margin: 26px 0;
+    box-shadow: 0 12px 40px rgba(0,0,0,.08);
     scroll-margin-top: 100px;
 }
 
-h1,h2{
-    color:var(--navy);
+h1, h2 {
+    color: var(--navy);
 }
 
-h2{
-    font-size:2rem;
+h2 {
+    font-size: 2rem;
 }
 
-p{
-    font-size:1.15rem;
-    line-height:1.8;
+p {
+    font-size: 1.15rem;
+    line-height: 1.8;
 }
 
-.badge{
-    display:inline-block;
-    background:var(--navy);
-    color:#fff;
-    padding:10px 16px;
-    border-radius:999px;
-    font-size:.85rem;
-    font-weight:bold;
-    margin-bottom:16px;
+.badge {
+    display: inline-block;
+    background: var(--navy);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 16px;
 }
 
-.btn{
-    display:block;
-    width:fit-content;
-    margin:28px auto 0 auto;
-    background:var(--coral);
-    color:#fff;
-    padding:16px 26px;
-    border-radius:14px;
-    border:none;
-    cursor:pointer;
-    font-weight:bold;
-    text-decoration:none;
+.btn {
+    display: block;
+    width: fit-content;
+    margin: 28px auto 0 auto;
+    background: var(--coral);
+    color: #fff;
+    padding: 16px 26px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
 }
 
-.insight{
-    margin-top:18px;
-    padding:18px;
-    border-radius:16px;
-    background:#EEF5FD;
-    color:var(--navy);
+.btn:hover {
+    background: var(--coral-hover);
 }
 
-.progress-wrap{
-    position:sticky;
-    top:0;
-    background:#fff;
-    padding:14px;
-    border-bottom:1px solid #ddd;
-    z-index:1000;
+.insight {
+    margin-top: 18px;
+    padding: 18px;
+    border-radius: 16px;
+    background: #EEF5FD;
+    color: var(--navy);
 }
 
-.progress-title{
-    font-weight:bold;
+.progress-wrap {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
 }
 
-.progress{
-    height:10px;
-    background:#ddd;
-    border-radius:20px;
-    margin-top:8px;
-    overflow:hidden;
+.progress-title {
+    font-weight: bold;
 }
 
-#bar{
-    height:10px;
-    background:var(--navy);
-    width:20%;
+.progress {
+    height: 10px;
+    background: #ddd;
+    border-radius: 20px;
+    margin-top: 8px;
+    overflow: hidden;
 }
 
-.hidden{
-    display:none;
+#bar {
+    height: 10px;
+    background: var(--navy);
+    width: 20%;
+    transition: width 0.3s ease;
 }
 
-.top-tools{
-    position:fixed;
-    top:10px;
-    right:10px;
-    z-index:2000;
+.hidden {
+    display: none !important;
 }
 
-.top-tools button{
-    background:var(--navy);
-    color:#fff;
-    border:none;
-    padding:10px;
-    border-radius:10px;
-    cursor:pointer;
+/* Alterado para o fundo do ecrã para não tapar a barra de progresso no telemóvel */
+.top-tools {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2000;
 }
 
-.large p{
-    font-size:1.35rem;
+.top-tools button {
+    background: var(--navy);
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-weight: bold;
 }
 
-.large h2{
-    font-size:2.3rem;
+.large p {
+    font-size: 1.35rem;
+}
+
+.large h2 {
+    font-size: 2.3rem;
 }
