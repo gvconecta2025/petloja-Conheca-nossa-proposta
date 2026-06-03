@@ -35,6 +35,7 @@ body{
     padding:34px;
     margin:26px 0;
     box-shadow:0 12px 40px rgba(0,0,0,.08);
+    scroll-margin-top: 100px;
 }
 
 h1,h2{
