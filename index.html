@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PetLojas - Diagnóstico Digital</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="progressWrap" class="progress-wrap hidden">
+  <div class="progress-title">Diagnóstico Digital PetLojas</div>
+  <div id="progressText">1 de 5 etapas</div>
+  <div class="progress"><div id="bar"></div></div>
+</div>
+
+<header class="hero">
+  <img src="logo.png" class="logo" alt="PetLojas">
+  <h1>Diagnóstico Digital para Pet Shops</h1>
+  <p>Descubra oportunidades para aumentar a visibilidade da sua loja, fortalecer o relacionamento com seus clientes e gerar mais pedidos pelo WhatsApp.</p>
+  <button class="btn" onclick="startJourney()">Começar Diagnóstico</button>
+</header>
+
+<main class="container">
+
+<section id="s1" class="block hidden">
+<div class="badge">DIAGNÓSTICO 1 DE 5</div>
+<h2>Como seus clientes encontram seus produtos hoje?</h2>
+<p>Imagine que um cliente precise comprar ração hoje. Ele pega o celular e procura uma solução. Se quiser visualizar todos os produtos da sua loja sem sair de casa, qual caminho ele precisa percorrer?</p>
+<p>Em muitos pet shops, o cliente precisa pedir fotos, perguntar preços e aguardar atendimento. Nesse processo, parte das vendas se perde simplesmente porque comprar ficou mais difícil do que deveria.</p>
+<div class="insight">Quanto mais fácil for encontrar seus produtos, maior a chance do cliente comprar de você.</div>
+<button class="btn" onclick="showStep(2)">Sim, isso acontece</button>
+</section>
+
+<section id="s2" class="block hidden">
+<div class="badge">DIAGNÓSTICO 2 DE 5</div>
+<h2>O concorrente realmente vende mais?</h2>
+<p>Muitas vezes o concorrente não possui melhores produtos nem melhor atendimento. Ele apenas é mais fácil de encontrar quando o cliente procura uma solução.</p>
+<p>Hoje, facilidade de acesso influencia diretamente a decisão de compra.</p>
+<div class="insight">A decisão de compra começa antes do cliente entrar na loja.</div>
+<button class="btn" onclick="showStep(3)">Já percebi isso</button>
+</section>
+
+<section id="s3" class="block hidden">
+<div class="badge">DIAGNÓSTICO 3 DE 5</div>
+<h2>O que acontece depois da venda?</h2>
+<p>Pense nos clientes que compraram nos últimos meses. Quantos voltaram a comprar? Quantos poderiam voltar se recebessem uma lembrança, novidade ou promoção?</p>
+<p>Relacionamento gera recompra.</p>
+<div class="insight">Vender novamente para quem já comprou costuma ser mais fácil do que conquistar um cliente novo.</div>
+<button class="btn" onclick="showStep(4)">Quero aumentar a recompra</button>
+</section>
+
+<section id="s4" class="block hidden">
+<div class="badge">DIAGNÓSTICO 4 DE 5</div>
+<h2>O Método PetLojas</h2>
+<p>Os pet shops que crescem de forma consistente costumam seguir um processo simples: atrair atenção, facilitar pedidos e manter relacionamento com os clientes.</p>
+<p>Quando essas etapas trabalham juntas, os resultados tendem a ser mais previsíveis.</p>
+<div class="insight">Atração, conversão e relacionamento trabalham juntos para aumentar as vendas.</div>
+<button class="btn" onclick="showStep(5)">Continuar</button>
+</section>
+
+<section id="s5" class="block hidden">
+<div class="badge">RESULTADO</div>
+<h2>Seu diagnóstico foi concluído</h2>
+<p>Se você chegou até aqui, provavelmente identificou oportunidades para aumentar pedidos, melhorar a visibilidade dos produtos e fortalecer o relacionamento com seus clientes.</p>
+<a class="btn" target="_blank" href="https://wa.me/5533998104753?text=Olá! Concluí o Diagnóstico Digital da PetLojas e gostaria de conversar sobre minha loja.">Quero conversar sobre minha loja</a>
+</section>
+
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
