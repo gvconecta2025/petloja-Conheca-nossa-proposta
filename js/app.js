@@ -18,7 +18,7 @@ function startJourney(){
     if(typeof gtag !== 'undefined') {
         gtag('event', 'funil_iniciado', {
             'event_category': 'Diagnostico',
-            'event_label': 'Passo 1'
+            'event_label': 'botao 00'
         });
     }
 }
@@ -37,11 +37,14 @@ function showStep(n){
     
     update(n);
 
+    // Mágica para renomear os botões de acordo com o passo clicado (01, 02, 03, 04)
+    let nomeBotao = 'botao 0' + (n - 1);
+
     if(typeof gtag !== 'undefined') {
-        gtag('event', 'etapa_concluida', {
+        gtag('event', 'clique_etapa', {
             'event_category': 'Diagnostico',
-            'event_label': 'Passo ' + n,
-            'valor_etapa': n
+            'event_label': nomeBotao,
+            'passo_destino': n
         });
     }
 }
